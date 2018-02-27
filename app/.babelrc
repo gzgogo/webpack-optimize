@@ -1,0 +1,23 @@
+{
+  "presets": [
+      ["env", {"modules": false}],
+      "react",
+      "stage-0"
+  ],
+  "env": {
+    "start": {
+      "presets": ["react-hmre"]
+    }
+  },
+  "plugins": [
+    "transform-decorators-legacy",
+    ["import", [{ "libraryName": "antd" }]],
+    ["transform-runtime", {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "presets": [["es2015", {"modules": false}],"es2017", "react", "stage-0"],
+    "plugins": [
+        "transform-runtime",
+        "transform-decorators-legacy",
+        "transform-do-expressions",
+        ["import", [{
+            "libraryName": "antd"
+        }]]
+    ],
+    "env": {
+        "start": {
+            "presets": [
+                "react-hmre"
+            ]
+        },
+        "dev": {
+            "presets": ["react-hmre"],
+            "plugins": [
+                ["react-transform", {
+                    "transforms": [{
+                        "transform": "react-transform-hmr",
+                        "imports": ["react"],
+                        "locals": ["module"]
+                    }]
+                }]
+            ]
+        }
+    }
+}
